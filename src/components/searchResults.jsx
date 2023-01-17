@@ -19,7 +19,7 @@ export default function SearchResults(props) {
                     {!!error &&
                         <Alert variant='danger'>{error}</Alert>
                     }
-                    {results.map((question) => (
+                    {results?.map((question) => (
                         <div key={question.id}>
                             <Question {...question} />
                         </div>
