@@ -1,21 +1,20 @@
 import React from "react";
+import Card from "react-bootstrap/Card"
 
-export default class Answer extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            id: props.id,
-            body: props.body,
-        };
-    }
-
-    render(){
-        const {
-            body,
-        } = this.state;
-        return(
-            <div>{body}</div>
-        )
-    }
+export default function Answer(props) {
+    const {
+        id,
+        body,
+        createdAt,
+    } = props;
+    return (
+        <Card className="answer">
+            <Card.Body>
+                <Card.Header className="answer-header">
+                    <div>{createdAt} </div>
+                </Card.Header>
+                <Card.Text className="answer-body">{body}</Card.Text>
+            </Card.Body>
+        </Card>
+    )
 }

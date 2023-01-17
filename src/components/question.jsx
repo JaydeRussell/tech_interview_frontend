@@ -1,7 +1,9 @@
-import React from "react";
+import "./question.css"
 
+import React from "react";
 import Answer from "./answer";
 import Card from "react-bootstrap/Card";
+
 
 export default class Question extends React.Component {
     constructor(props) {
@@ -29,19 +31,23 @@ export default class Question extends React.Component {
             showAnswers,
         } = this.state;
         return (
-            <Card>
+            <Card className="question">
                 <Card.Body>
-                    <Card.Title>Question Id: {id}</Card.Title>
-                    <Card.Subtitle>Created: {createdAt}</Card.Subtitle>
+                    <Card.Header className="question-header">
+                        <div>{createdAt} </div>
+                    </Card.Header>
                     <Card.Text>{body}</Card.Text>
-                    <Card.Link onClick={this.toggleShowAnswers}>{showAnswers ? "hide answers" : "show answers"}</Card.Link>
-                    <br />
-                    {showAnswers &&
-                        <Card.Footer>
-                            {answers.map((answer) => <Answer key={answer.id} {...answer} />)}
-                        </Card.Footer>
+                    {!!answers &&
+                        <Card.Link className="show-answer-link" onClick={this.toggleShowAnswers}>{showAnswers ? "hide answers" : "show answers"}</Card.Link>
                     }
                 </Card.Body>
+                {showAnswers &&
+                    <Card.Footer>
+                        {!!answers &&
+                            answers.map((answer) => <Answer key={answer.id} {...answer} />)
+                        }
+                    </Card.Footer>
+                }
             </Card>
         )
     }

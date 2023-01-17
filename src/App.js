@@ -1,13 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
-import { SearchHeader, SearchResults } from './components';
-
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import { Search } from './pages';
 function App() {
   return (
     <div className="App">
       <header className="App-header" />
-      <SearchHeader />
-      <SearchResults />
+      <Search />
     </div>
   );
 }
