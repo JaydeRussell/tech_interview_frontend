@@ -20,7 +20,7 @@ In the backend project there's a `docker-compose.yml` file that contains the log
 
 
 ## Step 2: Starting the Golang Backend
-Starting the backend is simple, just navigate to the backend directory and run `go run main.go`
+Starting the backend is simple, just navigate to the frontend directory then run `go get` and `go run main.go`
 
 ### Things to watch out for... 
 If there's no database available, then the app will not start. Since this project is a glorified CRUD api, I consider this a feature. 
@@ -30,7 +30,7 @@ Also, by default the backend will attempt to connect to a database provided by t
 **As a note:** Normally, pushing a db connection string to a public github repo is a big no-no, but I consider this permissible since it's a _very_ generic connection string to a locally defined database. I would never do something like this if it were any other circumstance.
 
 ## Step 3: Starting the react frontend
-Starting the react frontend is also very simple, just navigate to the frontend directory and run `npm start`
+Starting the react frontend is also very simple, just navigate to the frontend directory then run `npm install` and `npm start`
 
 ### Things to watch out for...
 The frontend _should_ be started after the backend is already up and running, however most (if not all) of the code accounts for the possibility of the backend not existing. The app probably won't look pretty, but it also shouldn't crash and you should be able to just refresh the browser page after the backend is up and running.
