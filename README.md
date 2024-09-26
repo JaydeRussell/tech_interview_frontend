@@ -45,9 +45,6 @@ Here's just a brief explanation for the decisions I made along the way. I feel l
 #### React
 For the frontend I decided to use react, or more specifically [Create React App](https://create-react-app.dev/), I did this for a couple of reasons. Mostly just because it handles all of the boilerplate of a react app, and while I probably wouldn't use it to create an optimized production ready website, it was more than enough for this project.
 
-#### CSS
-I let [react-boostrap](https://react-bootstrap.github.io/) do most of the css just because I don't consider frontend development to be my specialty and react-bootstrap made quick work of the ui elements. I had to modify some of it to get a slightly better look, but definitely not much.
-
 
 ### Backend
 #### GO
